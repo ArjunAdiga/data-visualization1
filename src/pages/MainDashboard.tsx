@@ -61,11 +61,11 @@ const MainDashboard = () => {
           </div>
           <div className="flex  flex-col w-full" style={{ gap: "8px",padding:"2px 8px 4px" }}>
            <div className="flex  w-full justify-between flex-row" style={{padding:"4px 6px",border:"1px solid #C9FF3B" , borderRadius:"4px",gap:"12px"}}>
-               <Typography variant="label1" styles={{color:"#C9FF3B"}}>The best found configuration based on profit is characterized by 11 zones (max) with charging stations and 48 total number of poles.</Typography>
+               <Typography variant="label2" styles={{color:"#C9FF3B"}}>The best found configuration based on profit is characterized by 11 zones (max) with charging stations and 48 total number of poles.</Typography>
                <Ellipsis color="#C9FF3B"/>
            </div>
            <div className="flex  w-full justify-between  flex-row" style={{padding:"4px 6px",border:"1px solid #C9FF3B" , borderRadius:"4px",gap:"12px"}}>
-               <Typography variant="label1" styles={{color:"#C9FF3B"}}>The best found configuration based on satisfied demand is characterized by 11 zones (max) with charging stations and 48 total number of poles.</Typography>
+               <Typography variant="label2" styles={{color:"#C9FF3B"}}>The best found configuration based on satisfied demand is characterized by 11 zones (max) with charging stations and 48 total number of poles.</Typography>
                <Ellipsis color="#C9FF3B"/>
            </div>
           </div>
