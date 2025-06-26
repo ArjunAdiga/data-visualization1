@@ -9,8 +9,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 
 function App() {
   const email= useAuthStore(state => state.email)
-  const password= useAuthStore(state => state.password)
-  const isLogin = !!email && !!password
+  const isLogin = !!email 
 
   return (
     <>

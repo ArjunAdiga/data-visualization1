@@ -1,18 +1,43 @@
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant: 'primary' | 'secondary';
+import React from 'react';
+
+interface ButtonProps {
+  variant?: 'primary' | 'secondary';
   children: React.ReactNode;
+  onClick?: () => void;
+  disabled?: boolean;
+  className?: string;
+  type?: 'button' | 'submit' | 'reset';
   styles?:React.CSSProperties
 }
 
-const variantStyles = {
-  primary: 'text-white',
-  secondary: 'bg-gray-200 text-black hover:bg-gray-300',
-};
+const Button: React.FC<ButtonProps> = ({
+  variant = 'primary',
+  children,
+  onClick,
+  disabled = false,
+  className = '',
+  type = 'button',
+  styles,
+}) => {
+  const baseStyles = 'h-10 px-4 rounded-md text-sm font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center';
 
-export default function Button({ variant = 'primary', children, styles  }: ButtonProps) {
+  const variantStyles = {
+    primary: 'bg-lime-500 text-black hover:bg-lime-400 focus:ring-lime-500 active:bg-lime-600',
+    secondary: 'bg-[#2C2E334D] text-white border  hover:bg-gray-600 hover:border-gray-500 focus:ring-gray-500 active:bg-gray-800'
+  };
+
   return (
-    <button className={`px-4 py-2 rounded ${variantStyles[variant]}`} style={{...styles,backgroundColor : variant === "primary" ? "#5A5A5A"  :""}}>
+    <button
+      type={type}
+      onClick={onClick}
+      disabled={disabled}
+      className={`${baseStyles} ${variantStyles[variant]} ${className}`}
+      style={{border : "1px solid #5A5A5A",borderRadius:"4px",fontWeight:600,fontSize:"16px",display:"flex", alignItems:"center" ,...styles}}
+    >
       {children}
     </button>
   );
-}
+};
+
+export default Button;
+
