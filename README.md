@@ -5,10 +5,10 @@
 - Has dashboard with nav bar , sidebar and graph
 - on click of "Edit variables" opens the drawer to edit variables , can add and remove variables wand selected ones are stored in state management
 - on click of profile icon - it log outs the user 
-Tradeoffs
+- Tradeoffs
 - Might be some typography properties missing and some color code difference.
 - Success toaster is missing.
 - Redirections for nav bar is present (onclick) but hover properties are missing. Same for sidebar
-How to run
+- How to run
 - clone git repo or download the repo
 - Run npm install to download required packages
