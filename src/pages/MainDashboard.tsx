@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Typography from "../components/Typography";
 import Button from "../components/Button";
 import Graphs from "../components/Graphs";
