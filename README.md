@@ -13,3 +13,5 @@
 - How to run
 - clone git repo or download the repo
 - Run npm install to download required packages
+
+  https://data-visualization1.vercel.app/ -> this is the demo link
